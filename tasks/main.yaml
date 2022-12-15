@@ -8,7 +8,7 @@
     msg: "{{ _stat }}"
 
 - name: "directory | /opt/ansible-role-helm/{{ ansible_role_helm_version }}"
-  ansible.buildin.file:
+  ansible.builtin.file:
     path: "/opt/ansible-role-helm/{{ ansible_role_helm_version }}"
     state: directory
     recurse: true
