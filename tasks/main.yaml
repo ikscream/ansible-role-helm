@@ -22,4 +22,3 @@
     state: link
     src: "/opt/ansible-role-helm/{{ ansible_role_helm_version }}/linux-amd64/helm"
     dest: "/usr/bin/helm" 
-  when: not _stat.stat.exists
