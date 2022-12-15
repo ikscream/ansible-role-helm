@@ -7,6 +7,12 @@
   debug:        
     msg: "{{ _stat }}"
 
+- name: "directory | /opt/ansible-role-helm/{{ ansible_role_helm_version }}"
+  ansible.buildin.file:
+    path: "/opt/ansible-role-helm/{{ ansible_role_helm_version }}"
+    state: directory
+    recurse: true
+
 - name: "unarchive | https://get.helm.sh/helm-{{ ansible_role_helm_version }}-linux-amd64.tar.gz"
   ansible.builtin.unarchive:
     src: https://get.helm.sh/helm-{{ ansible_role_helm_version }}-linux-amd64.tar.gz
