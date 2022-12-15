@@ -18,3 +18,9 @@
     src: https://get.helm.sh/helm-{{ ansible_role_helm_version }}-linux-amd64.tar.gz
     dest: "/opt/ansible-role-helm/{{ ansible_role_helm_version }}"
     remote_src: yes
+
+- name: "link | /opt/ansible-role-helm{{ ansible_role_helm_version }}/linux-amd64/helm"
+  file:
+    state: link
+    src: "/opt/ansible-role-helm{{ ansible_role_helm_version }}/linux-amd64/helm"
+    dest: "/usr/bin/helm" 
